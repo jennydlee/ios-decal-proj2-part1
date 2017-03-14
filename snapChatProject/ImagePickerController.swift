@@ -9,6 +9,9 @@
 import UIKit
 
 class ImagePickerController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    var pickedimage: UIImage?
+    var whichfeed: String?
+    
     
     @IBOutlet var imageCollectionView: UICollectionView!
     override func viewDidLoad() {
@@ -23,9 +26,25 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
     
 
     func selectImage(_ image: UIImage) {
+        pickedimage = image
+        performSegue(withIdentifier: "ImageToChooseFeed", sender: self)
+    
         //The image being selected is passed in as "image".
+        
     }
     
+    //I THINK I NEED TO DO THIS HERE
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ImageToChooseFeed" {
+            if let dest = segue.destination as? ChooseFeedViewController {
+//                let date = NSDate()
+//                let calendar = NSCalendar.current
+//                let hour = calendar.component(.hour, from: date as Date)
+//                let minutes = calendar.component(.minute, from: date as Date)
+                var snapinstance = Snap(time: Timer(), user: "Jenny Lee", status: false, image: pickedimage!, feedtype: "")
+            }
+        }
+    }
     
     
     //DON'T MODIFY CODE HERE AND BELOW!
