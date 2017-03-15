@@ -10,7 +10,13 @@ import UIKit
 
 class customViewFeedTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var feedTitle: UILabel!
+    @IBOutlet weak var readImage: UIImageView!
+
+    @IBOutlet weak var userName: UILabel!
+    @IBOutlet weak var timerLabel: UILabel!
+    
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

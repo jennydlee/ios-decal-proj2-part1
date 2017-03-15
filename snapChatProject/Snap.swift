@@ -10,19 +10,22 @@ import UIKit
 import Foundation
 
 class Snap: NSObject {
-    let time: Timer!
+    let time: Date!
     let user: String!
     let status: Bool!
     let image: UIImage!
-    let feedtype: String!
     
-    init(time: Timer, user: String, status: Bool, image: UIImage, feedtype: String) {
-        self.time = time
+    init(user: String, status: Bool, image: UIImage) {
         self.user = user
         self.status = status
         self.image = image
-        self.feedtype = feedtype
+        self.time = Date()
+        
     }
+//    func timestamp() {
+//        let variablegoesherejenny: Int?
+//        return "\(variablegoesherejenny)"
+//    }
     
 }
 

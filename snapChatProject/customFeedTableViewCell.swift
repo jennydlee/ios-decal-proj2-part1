@@ -12,7 +12,7 @@ class customFeedTableViewCell: UITableViewCell {
 
     
     @IBOutlet weak var chooseFeedTitle: UILabel!
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -33,17 +33,12 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
         
     }
     
-    //I THINK I NEED TO DO THIS HERE
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "ImageToChooseFeed" {
-            if let dest = segue.destination as? ChooseFeedViewController {
-//                let date = NSDate()
-//                let calendar = NSCalendar.current
-//                let hour = calendar.component(.hour, from: date as Date)
-//                let minutes = calendar.component(.minute, from: date as Date)
-                var snapinstance = Snap(time: Timer(), user: "Jenny Lee", status: false, image: pickedimage!, feedtype: "")
-            }
-        }
+        let dest = segue.destination as! ChooseFeedViewController
+        let snapinstance = Snap(user: "Jenny Lee", status: false, image: pickedimage!)
+        dest.holdimage = snapinstance
+        
+    
     }
     
     
