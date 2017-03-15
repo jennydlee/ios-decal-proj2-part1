@@ -14,7 +14,7 @@ class ChooseFeedViewController: UIViewController, UITableViewDataSource, UITable
   
     @IBOutlet weak var postingTo: UILabel!
     @IBAction func arrowButton(_ sender: Any) {
-//        let date = Date
+//        let date = Date()
         
         threads[currentselect]!.append(holdimage)
         
@@ -67,7 +67,7 @@ class ChooseFeedViewController: UIViewController, UITableViewDataSource, UITable
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let dest = segue.destination as! ImagePickerController
-//        dest.holdimage = holdimage
+        dest.holdimage = holdimage
     }
         
 

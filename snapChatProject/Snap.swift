@@ -23,8 +23,8 @@ class Snap: NSObject {
         
     }
 //    func timestamp() {
-//        let variablegoesherejenny: Int?
-//        return "\(variablegoesherejenny)"
+//        let variablegoeshere: Int?
+//        return "\(variablegoeshere)"
 //    }
     
 }

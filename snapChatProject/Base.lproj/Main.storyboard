@@ -247,11 +247,39 @@
                     <navigationItem key="navigationItem" id="f9I-ZN-AJ9"/>
                     <connections>
                         <outlet property="feedTableView" destination="gFb-3n-XfE" id="yRw-N0-YwV"/>
+                        <segue destination="ySF-Kd-Wsi" kind="show" identifier="viewSnap" id="XJU-j5-bKj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oux-5l-9Tg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4045.5999999999999" y="-377.36131934032989"/>
+        </scene>
+        <!--See Snap View Controller-->
+        <scene sceneID="GBi-e1-Xp9">
+            <objects>
+                <viewController id="ySF-Kd-Wsi" customClass="seeSnapViewController" customModule="snapChatProject" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ubx-2Z-HSQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="WG0-OI-Ypg"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hme-gz-eDc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q3M-IN-IuH">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="theSnap" destination="q3M-IN-IuH" id="Cic-7C-RU8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JHa-4Q-926" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4890.3999999999996" y="-229.83508245877064"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="6rV-T9-aDh">

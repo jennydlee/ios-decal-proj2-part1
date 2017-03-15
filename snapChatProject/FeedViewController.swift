@@ -12,6 +12,7 @@ class FeedViewController: UITableViewController{
     
     @IBOutlet var feedTableView: UITableView!
     var selectedIndexPath: IndexPath?
+    var holdimage: Snap!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,9 +29,7 @@ class FeedViewController: UITableViewController{
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         selectedIndexPath = indexPath
-        
-        
-//        performSegue(withIdentifier: "chooseFeedToFeed", sender: self)
+        performSegue(withIdentifier: "viewSnap", sender: self)
         
     }
     
@@ -55,6 +54,11 @@ class FeedViewController: UITableViewController{
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let dest = segue.destination as! seeSnapViewController
+        dest.passedSnap = holdimage
     }
     
 

@@ -11,6 +11,7 @@ import UIKit
 class ImagePickerController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     var pickedimage: UIImage?
     var whichfeed: String?
+    var holdimage: Snap!
     
     
     @IBOutlet var imageCollectionView: UICollectionView!
@@ -37,8 +38,6 @@ class ImagePickerController: UIViewController, UICollectionViewDataSource, UICol
         let dest = segue.destination as! ChooseFeedViewController
         let snapinstance = Snap(user: "Jenny Lee", status: false, image: pickedimage!)
         dest.holdimage = snapinstance
-        
-    
     }
     
     
